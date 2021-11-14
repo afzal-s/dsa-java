@@ -1,4 +1,4 @@
-package com.kunal.datastructure;
+package com.kunal.datastructure.linearsearch;
 
 public class LinearSearch {
 	public static void main(String[] args) {
@@ -24,6 +24,26 @@ public class LinearSearch {
 		char targetForForEachLoop = 'l';
 		boolean isExistInStringWithForEachLoop = linearSearchInStringToGetBooleanWithForEachLoop(name, targetForForEachLoop);
 		System.out.println(isExistInStringWithForEachLoop);
+		
+		int[] array = {12, 43, -42, 45, 2, 1, 5, 67};
+		int target = 45;
+		int checkInRange = linearSearchInRange(array, target, 1, 4);
+		System.out.println(checkInRange);
+	}
+
+	private static int linearSearchInRange(int[] array, int target, int start, int end) {
+		if (array.length == 0) {
+			return -1;
+		}
+		
+		for (int index = start; index <= end; index++) {
+			int element = array[index];
+			if (element == target) {
+				return index;
+			}
+		}
+		
+		return -1;
 	}
 
 	private static int linearSearchForGettingIndex(int[] numberArray, int target) {
@@ -69,7 +89,6 @@ public class LinearSearch {
 		
 		return false;
 	}
-
 
 	private static boolean linearSearchInStringToGetBoolean(String name, char target) {
 		if (name.length() == 0) {
