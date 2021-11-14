@@ -15,22 +15,15 @@ public class LinearSearch {
 		
 		boolean isExist = linearSearchForGettingBoolean(numberArray, targetForGettingBoolean);
 		System.out.println(isExist);
-
-	}
-
-	private static boolean linearSearchForGettingBoolean(int[] numberArray, int target) {
-		if (numberArray.length == 0) {
-			return false;
-		}
 		
-		for (int index = 0; index < numberArray.length; index++) {
-			int element = numberArray[index];
-			if (element == target) {
-				return true;
-			}
-		}
+		String name = "Sohail";
+		char targetForForLoop = 'a';
+		boolean isExistInString = linearSearchInStringToGetBoolean(name, targetForForLoop);
+		System.out.println(isExistInString);
 		
-		return false;
+		char targetForForEachLoop = 'l';
+		boolean isExistInStringWithForEachLoop = linearSearchInStringToGetBooleanWithForEachLoop(name, targetForForEachLoop);
+		System.out.println(isExistInStringWithForEachLoop);
 	}
 
 	private static int linearSearchForGettingIndex(int[] numberArray, int target) {
@@ -60,6 +53,50 @@ public class LinearSearch {
 		}
 		
 		return -1;
+	}
+	
+	private static boolean linearSearchForGettingBoolean(int[] numberArray, int target) {
+		if (numberArray.length == 0) {
+			return false;
+		}
+		
+		for (int index = 0; index < numberArray.length; index++) {
+			int element = numberArray[index];
+			if (element == target) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+
+
+	private static boolean linearSearchInStringToGetBoolean(String name, char target) {
+		if (name.length() == 0) {
+			return false;
+		}
+		
+		for (int index = 0; index < name.length(); index++) {
+			if (target == name.charAt(index)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private static boolean linearSearchInStringToGetBooleanWithForEachLoop(String name, char target) {
+		if (name.length() == 0) {
+			return false;
+		}
+		
+		for (char character : name.toCharArray()) {
+			if (character == target) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 }
