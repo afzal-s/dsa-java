@@ -5,12 +5,32 @@ public class LinearSearch {
 		int[] numberArray = {23, 43, 53, 67, 43, 3, 9, 87, -21, 26};
 		int targetForGettingIndex = -21;
 		int targetForGettingElement = 67;
+		int targetForGettingBoolean = 43;
 
 		int linearSearchForIndex = linearSearchForGettingIndex(numberArray, targetForGettingIndex);
 		System.out.println(linearSearchForIndex);
 		
 		int linearSearchForElement = linearSearchForGettingElement(numberArray, targetForGettingElement);
 		System.out.println(linearSearchForElement);
+		
+		boolean isExist = linearSearchForGettingBoolean(numberArray, targetForGettingBoolean);
+		System.out.println(isExist);
+
+	}
+
+	private static boolean linearSearchForGettingBoolean(int[] numberArray, int target) {
+		if (numberArray.length == 0) {
+			return false;
+		}
+		
+		for (int index = 0; index < numberArray.length; index++) {
+			int element = numberArray[index];
+			if (element == target) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 	private static int linearSearchForGettingIndex(int[] numberArray, int target) {
