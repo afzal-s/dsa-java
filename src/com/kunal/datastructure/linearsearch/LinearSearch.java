@@ -1,4 +1,4 @@
-package com.kunal.datastructure;
+package com.kunal.datastructure.linearsearch;
 
 public class LinearSearch {
 	public static void main(String[] args) {

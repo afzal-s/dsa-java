@@ -1,4 +1,4 @@
-package com.kunal.datastructure;
+package com.kunal.datastructure.linearsearch;
 
 /**
  * Given an array nums of integers, return how many of them contain an even
